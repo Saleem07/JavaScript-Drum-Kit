@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=saleemsh.me">
+  	
     <meta charset="UTF-8" />
     <title>JS Drum Kit</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="keys">
+      
       <div data-key="65" class="key">
         <kbd>A</kbd>
         <span class="sound">clap</span>
@@ -72,8 +75,9 @@
         this.classList.remove("playing");
       }
       window.addEventListener("keydown", playSound);
-      const keys = document.querySelectorAll(".key");
       
+      const keys = document.querySelectorAll(".key");
+
       keys.forEach(key =>
         key.addEventListener("transitionend", removeTransition)
       );
